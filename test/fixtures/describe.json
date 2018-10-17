@@ -1,0 +1,28 @@
+{
+  "StreamDescription": {
+    "EncryptionType": "NONE",
+    "EnhancedMonitoring": [
+      {
+        "ShardLevelMetrics": []
+      }
+    ],
+    "HasMoreShards": false,
+    "RetentionPeriodHours": 24,
+    "Shards": [
+      {
+        "HashKeyRange": {
+          "EndingHashKey": "340282366920938463463374607431768211455",
+          "StartingHashKey": "0"
+        },
+        "SequenceNumberRange": {
+          "StartingSequenceNumber": "49588141943037857337944175886320960908094655381951741954"
+        },
+        "ShardId": "shardId-000000000000"
+      }
+    ],
+    "StreamARN": "arn:aws:kinesis:us-west-2:723448195292:stream/UserAnalytics",
+    "StreamCreationTimestamp": 1536620838.0,
+    "StreamName": "UserAnalytics",
+    "StreamStatus": "ACTIVE"
+  }
+}
