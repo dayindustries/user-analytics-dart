@@ -2,3 +2,4 @@ name: user_analytics
 dependencies:
   test:
   http:
+  intl:

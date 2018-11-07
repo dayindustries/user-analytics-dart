@@ -42,12 +42,17 @@ func main() async {
   String streamName = 'UserAnalytics';
   UserAnalytics userAnalytics = new UserAnalytics(endpoint, token);
   Map<String, dynamic> data = {
+    'distinct_id': '1',
+    'time': UserAnalytics.toAthenaTimestamp(DateTime.now()),
+    'ip': '71.198.38.200'
+    'env': 'prod',
     'event': 'Signed Up',
-    'properties': {
-      'distinct_id': '1',
-      'time': '2018-09-10T15:24:49-07:00',
-      'ip': '71.198.38.200'
-    }
+    'subcategory': '',
+    'event_id': '',
+    'source': 'someservice',
+    'client': 'ios',
+    'os_version': '',
+    'app_version': ''
   };
 
   Map<String, dynamic> listResult = await userAnalytics.list();

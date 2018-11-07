@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:async';
+import 'package:intl/intl.dart';
 import 'package:http/http.dart' as http;
 
 class UserAnalytics {
@@ -10,6 +11,13 @@ class UserAnalytics {
   String endpoint;
   String token;
   http.BaseClient client;
+
+  static String toAthenaTimestamp(DateTime date) {
+    var utcDate = date.toUtc();
+    var ms = utcDate.millisecond.toString().padLeft(3,'0');
+    var formatter = new DateFormat('yyyy-MM-dd HH:mm:ss.$ms');
+    return formatter.format(date);
+  }
 
   UserAnalytics(String endpoint, String token) {
     this.endpoint = endpoint;
