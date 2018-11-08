@@ -9,7 +9,7 @@ Add the following to your `pubspec.yaml`:
 ```yaml
 dependencies:
   user_analytics:
-    git: git://github.com/day-industries/user-analytics-dart.git
+    git: https://github.com/dayindustries/user-analytics-dart.git
 ```
 
 ## Usage
