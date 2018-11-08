@@ -44,7 +44,7 @@ func main() async {
   Map<String, dynamic> data = {
     'distinct_id': '1',
     'time': UserAnalytics.toAthenaTimestamp(DateTime.now()),
-    'ip': '71.198.38.200'
+    'ip': '1.2.3.4',
     'env': 'prod',
     'event': 'Signed Up',
     'subcategory': '',
@@ -59,7 +59,7 @@ func main() async {
   print(listResult);
   Map<String, dynamic> describeResult = await userAnalytics.describe(streamName);
   print(describeResult);
-  Map<String, dynamic> describeResult = await userAnalytics.describe(streamName, data);
+  Map<String, dynamic> describeResult = await userAnalytics.post(streamName, data);
   print(describeResult);
 }
 ```
