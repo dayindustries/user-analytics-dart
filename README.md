@@ -44,7 +44,6 @@ func main() async {
   Map<String, dynamic> data = {
     'distinct_id': '1',
     'time': UserAnalytics.toAthenaTimestamp(DateTime.now()),
-    'ip': '1.2.3.4',
     'env': 'prod',
     'event': 'Signed Up',
     'subcategory': '',
